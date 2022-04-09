@@ -1,0 +1,9 @@
+function amountOfPages(summary){
+  let sum=0;
+  let i=1;
+  while (sum<summary){
+     sum += Math.ceil(Math.log10(i+1));
+      i++;
+  }
+  return i-1;
+}
