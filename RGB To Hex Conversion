@@ -1,0 +1,9 @@
+function rgb(r, g, b){
+(r>255) ? r=255 : ((r<0) ? r=0 : r=r);
+(g>255) ? g=255 : ((g<0) ? g=0 : g=g);
+(b>255) ? b=255 : ((b<0) ? b=0 : b=b);
+                    
+  return  (((r<15) ? "0" + Number(r).toString(16) : Number(r).toString(16)) +
+          ((g<15) ? "0" + Number(g).toString(16) : Number(g).toString(16)) +
+          ((b<15) ? "0" + Number(b).toString(16) : Number(b).toString(16))).toUpperCase();  
+}
