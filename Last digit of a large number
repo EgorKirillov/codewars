@@ -1,0 +1,47 @@
+var lastDigit = function(str1, str2){  
+  let lastNumber1 = str1[str1.length-1];
+  let lastNumber2 = str2[str2.length-1];
+if (str2==0) {return 1;}
+  str2=Number(str2.slice(str2.length-3));
+  
+ switch (lastNumber1) {
+   case "0":  return 0; //0
+   case "1":  return 1;//1
+   case "5":  return 5;//5
+   case "6":  return 6;//6
+   case "2":  switch (str2%4){//4862   2-4? 3-8? 4-6? 5-2? 6-4.....
+     case 0: return 6;
+     case 1: return 2;
+     case 2: return 4;
+     case 3: return 8;
+   }
+   case "3":  switch (str2%4) {//9713  
+     case 0: return 1;
+     case 1: return 3;
+     case 2: return 9;
+     case 3: return 7;
+   }
+   case "4": switch (str2%2) {//64  
+     case 0: return 6;
+     case 1: return 4;
+   }
+   case "7":  switch (str2%4) {//9317 
+     case 0: return 1;
+     case 1: return 7;
+     case 2: return 9;
+     case 3: return 3;
+   }    
+   case "8":   switch (str2%4) {//4268 
+     case 0: return 6;
+     case 1: return 8;
+     case 2: return 4;
+     case 3: return 2;
+   }
+   case "9":  switch (str2%2) {//19  
+     case 0: return 1;
+     case 1: return 9;
+   }
+   default:  return null;//null
+ }
+ return 0; // fix me
+}
