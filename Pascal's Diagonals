@@ -1,0 +1,15 @@
+function generateDiagonal(n, l){
+  let arr=[];
+for (let i=0; i<n+1; i++){
+  arr[i]=[];
+  for (let j=0; j<l; j++){
+    if ((i == 0) || (j == 0))
+    { 
+      arr[i][j] = 1;
+    }
+    else { arr[i][j]=arr[i-1][j]+arr[i][j-1];}
+  }
+}
+return arr[n];
+  // return an array containing the numbers in the nth diagonal of Pascal's triangle, to the specified length
+}
