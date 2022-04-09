@@ -1,0 +1,27 @@
+function sumin(n) {
+  let sumMinim = 0;
+  for (let i=1; i < n+1; i++)  {
+    for (let j=1; j < n+1; j++){
+      (i < j) ? sumMinim += i : sumMinim += j;
+    }
+  }
+  return sumMinim;
+}
+function sumax(n) {
+ let sumMaxim = 0;
+  for (let i=1; i < n+1; i++)  {
+    for (let j=1; j < n+1; j++){
+      (i > j) ? sumMaxim += i : sumMaxim += j;
+    }
+  }
+  return sumMaxim;
+}
+function sumsum(n) {
+  let sum = 0;
+  for (let i=1; i < n+1; i++)  {
+    for (let j=1; j < n+1; j++){
+      sum = sum + i + j;
+    }
+  }
+ return sum; 
+}
