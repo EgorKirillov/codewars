@@ -1,0 +1,14 @@
+const xMarksTheSpot = (input) => {
+  let out=[];
+  let onlyOne=false;
+  for (let i=0; i<input.length; i++) {
+    for (let j=0; j<input[i].length; j++){
+      if (input[i][j] == 'x' && onlyOne === true ) {return [];}  
+      if (input[i][j] == 'x' && onlyOne === false ) {out=[i,j]; onlyOne=true;}
+    }
+  }
+    
+  
+  return out;
+}
+console.log(xMarksTheSpot([[0,0,0,0,0],[0,0,0,0,0],[0,0,'x',0,0],[0,0,0,"x",0],[0,0,0,0,0]]));
