@@ -1,0 +1,9 @@
+function validParentheses(parens) {
+  let ind=-1;
+  while (parens.length !== 0 ) {
+    ind=parens.indexOf("()");
+    if (ind == -1) {return false;}
+    parens=parens.slice(0, ind)+ parens.slice(ind+2);
+  }
+  return true;
+}
