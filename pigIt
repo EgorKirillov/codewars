@@ -1,0 +1,9 @@
+function pigIt(str){
+ let arr=str.split(' ')
+arr = arr.map(function change(item) {
+    return (item !== "!" && item !== "," && item !== "." && item !== "&") ? item.substring(1)+item[0]+"ay" : item
+})
+    return arr.join(' ')
+}
+
+console.log(pigIt('Pig latin is cool'))
